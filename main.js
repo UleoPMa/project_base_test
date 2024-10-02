@@ -11,12 +11,12 @@ var nes = new jsnes.NES({
 
 let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let audioBuffer = [];
-let sampleRate = 44100;  // Tasa de muestreo
+let sampleRate = 44000;  // Tasa de muestreo de audio
 
 function playAudioSample(left, right) {
     audioBuffer.push(left, right);
 
-    if (audioBuffer.length >= sampleRate /4) {
+    if (audioBuffer.length >= sampleRate /7) {
         let buffer = audioCtx.createBuffer(2, audioBuffer.length / 2, sampleRate);
         let channelLeft = buffer.getChannelData(0);
         let channelRight = buffer.getChannelData(1);
