@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NES Emulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="screenTv">
+            <canvas id="screen" width="896" height="840"></canvas>
+        </div>
+        <div class="rom-reader">
+            <input type="file" id="rom-input" accept=".nes">
+        </div>
+    </div>
+
+    <!-- Incluir JSNES desde CDN -->
+    <script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
