@@ -77,7 +77,7 @@ document.getElementById('rom-input').addEventListener('change', function (event)
 function startEmulation() {
     let lastFrameTime = 0;
     const fps = 60;
-    const frameInterval = 1000 / fps;
+    const frameInterval = 500 / fps;
 
     function frame(time) {
         // Calcula el tiempo transcurrido desde el último frame
